@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Atendimento
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Tab 2</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-button expand="block" (click)="chamarProximaSenha()">Chamar próxima senha</ion-button>
+      <ion-select placeholder="Selecione o guichê" [(ngModel)]="numeroGuiche">
+        <ion-select-option value="1">Guichê 1</ion-select-option>
+        <ion-select-option value="2">Guichê 2</ion-select-option>
+        <ion-select-option value="3">Guichê 3</ion-select-option>
+      </ion-select>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content>
+      <ion-list>
+        <ion-label>Relatório</ion-label>
+        <ion-item>Senhas emitidas: {{senhasService.senhasTotal}}</ion-item>
+        <ion-item>Senhas Geral: {{senhasService.senhasGeral}}</ion-item>
+        <ion-item>Senhas Prioritárias: {{senhasService.senhasPrior}}</ion-item>
+        <ion-item>Senhas Exame: {{senhasService.senhasExame}}</ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
+
