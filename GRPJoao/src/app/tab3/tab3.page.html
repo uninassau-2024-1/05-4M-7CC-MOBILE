@@ -1,0 +1,62 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Historico
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item>
+      <ion-label>
+        Senhas Emitidas:
+      </ion-label>
+      <ion-badge slot="end" color="light" padding-start="20px" padding-end="20px">
+        SG:
+      </ion-badge>
+      <ion-badge slot="end" color="dark">
+        {{ agentService.contadorPrioridade['SG'] || 0 }}
+      </ion-badge>
+      <ion-badge slot="end" color="light" padding-start="20px" padding-end="20px">
+        SP:
+      </ion-badge>
+      <ion-badge slot="end" color="dark">
+        {{ agentService.contadorPrioridade['SP'] || 0 }}
+      </ion-badge>
+      <ion-badge slot="end" color="light" padding-start="20px" padding-end="20px">
+        SE:
+      </ion-badge>
+      <ion-badge slot="end" color="dark">
+        {{ agentService.contadorPrioridade['SE'] || 0 }}
+      </ion-badge>
+    </ion-item>
+
+
+
+    
+    <ion-item>
+      <ion-label>
+        Senhas Atendidas:
+      </ion-label>
+      <ion-badge slot="end" color="light" padding-start="20px" padding-end="20px">
+        SG:
+      </ion-badge>
+      <ion-badge slot="end" color="dark">
+        {{ agentService.atendimentoPrioridade['SG'] || 0 }}
+      </ion-badge>
+      <ion-badge slot="end" color="light" padding-start="20px" padding-end="20px">
+        SP:
+      </ion-badge>
+      <ion-badge slot="end" color="dark">
+        {{ agentService.atendimentoPrioridade['SP'] || 0 }}
+      </ion-badge>
+      <ion-badge slot="end" color="light" padding-start="20px" padding-end="20px">
+        SE:
+      </ion-badge>
+      <ion-badge slot="end" color="dark">
+        {{ agentService.atendimentoPrioridade['SE'] || 0 }}
+      </ion-badge>
+    </ion-item>
+  </ion-list>
+</ion-content>
