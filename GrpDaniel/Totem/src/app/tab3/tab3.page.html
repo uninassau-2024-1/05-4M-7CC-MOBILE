@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Relatorios
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Tab 3</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <app-explore-container name="Tab 3 page"></app-explore-container>
+</ion-content>
+
+<ion-card>
+  <ion-card-content>
+    <ion-list>
+      <ion-label>Relatorio</ion-label>
+      <ion-item>Senhas Emitidas:  {{senhasService.senhasTotal}}</ion-item>
+      <ion-item>Senhas Geral:  {{senhasService.senhasGeral}}</ion-item>
+      <ion-item>Senhas Prioritarias:  {{senhasService.senhasPrior}}</ion-item>
+      <ion-item>Senhas Emaxe:  {{senhasService.senhasExame}}</ion-item>
+    </ion-list>
+  </ion-card-content>
+</ion-card>
