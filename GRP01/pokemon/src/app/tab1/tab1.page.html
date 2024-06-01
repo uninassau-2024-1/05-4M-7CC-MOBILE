@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Caçar Pokémon
+    </ion-title>
+  </ion-toolbar>
+</ion-header> 
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Digite o CEP</ion-label>
+    <ion-input
+    type="text"
+    imputmode="numeric"
+    pattern="\d*"
+    [(ngModel)]="areaBuscarPokemon"
+    maxlength="8">
+    </ion-input>
+  </ion-item>
+  <ion-button expand="block" (click)="buscarPokemon()">Buscar por pokemon</ion-button>
+
+  <ion-card *ngIf="pokemon">
+    <ion-card-header>
+     <strong> {{ pokemon.name | uppercase}} </strong>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-img style="width: 10%;" [src]="pokemon.sprites.front_default"></ion-img>
+      <p>Altura: {{ pokemon.height }}</p>
+      <p>Peso: {{ pokemon.weight }}</p>
+      <p>Habilidades: {{ pokemon.abilities.length }}</p>
+    </ion-card-content>
+  </ion-card> 
+
+  <ion-card *ngIf="areaBusca.logradouro">
+    <ion-card-header>
+      Informações de Endereço
+    </ion-card-header>
+    <ion-card-content>
+      <p>Logradouro: {{ areaBusca.logradouro }}</p>
+      <p>Bairro: {{ areaBusca.bairro }}</p>
+      <p>Localidade: {{ areaBusca.localidade }}</p>
+      <p>UF: {{ areaBusca.uf }}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
