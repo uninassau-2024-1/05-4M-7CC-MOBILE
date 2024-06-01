@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Relatórios de Senhas
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item>
+      <ion-label>
+        Senhas Emitidas:
+      </ion-label>
+      <ion-badge slot="end" color="success">
+        {{ senhasService.quantitativoPorPrioridade['SG'] || 0 }}
+      </ion-badge>
+      <ion-badge slot="end" color="danger">
+        {{ senhasService.quantitativoPorPrioridade['SP'] || 0 }}
+      </ion-badge>
+      <ion-badge slot="end" color="primary">
+        {{ senhasService.quantitativoPorPrioridade['SE'] || 0 }}
+      </ion-badge>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        Senhas Atendidas:
+      </ion-label>
+      <ion-badge slot="end" color="success">
+        {{ senhasService.atendimentoPorPrioridade['SG'] || 0 }}
+      </ion-badge>
+      <ion-badge slot="end" color="danger">
+        {{ senhasService.atendimentoPorPrioridade['SP'] || 0 }}
+      </ion-badge>
+      <ion-badge slot="end" color="primary">
+        {{ senhasService.atendimentoPorPrioridade['SE'] || 0 }}
+      </ion-badge>
+    </ion-item>
+  </ion-list>
+</ion-content>
