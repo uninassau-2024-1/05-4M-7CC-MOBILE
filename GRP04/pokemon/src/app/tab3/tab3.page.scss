@@ -1,0 +1,35 @@
+page-tab3 {
+    .pokemon-card {
+      margin: 10px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+      transition: 0.3s;
+    }
+  
+    .pokemon-card:hover {
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+  
+    .pokemon-image {
+      width: 100%;
+      height: auto;
+    }
+  
+    .pokemon-content {
+      text-align: center;
+    }
+  
+    .pokemon-name {
+      font-weight: bold;
+      font-size: 1.2em;
+      margin-bottom: 5px;
+    }
+  
+    .pokemon-info {
+      margin-bottom: 3px;
+    }
+  
+    .pokemon-icon {
+      margin-right: 5px;
+    }
+  }
+  

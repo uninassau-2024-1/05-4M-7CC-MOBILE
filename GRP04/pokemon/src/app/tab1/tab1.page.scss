@@ -1,0 +1,98 @@
+:host {
+    ion-header {
+      --background: #f8f9fa;
+  
+      ion-toolbar {
+        --background: #007bff;
+  
+        ion-title {
+          color: #ffffff;
+          font-size: 1.2em;
+        }
+      }
+    }
+  
+    ion-content {
+      --background: #f1f1f1;
+      padding: 16px;
+  
+      ion-card {
+        margin-top: 16px;
+  
+        &.search-card {
+          ion-card-header {
+            ion-input {
+              --background: #ffffff;
+              --placeholder-color: #6c757d;
+              --color: #495057;
+              --padding-start: 16px;
+              --padding-end: 16px;
+              --padding-top: 12px;
+              --padding-bottom: 12px;
+              border-radius: 8px;
+            }
+  
+            ion-button {
+              margin-top: 16px;
+              --background: #007bff;
+              --color: #ffffff;
+              border-radius: 8px;
+  
+              ion-icon {
+                margin-left: 8px;
+              }
+            }
+          }
+        }
+  
+        &.result-card {
+          ion-card-content {
+            ion-list {
+              ion-item {
+                --background: #ffffff;
+                border-radius: 8px;
+                margin-bottom: 8px;
+                padding: 12px;
+                font-size: 1em;
+                color: #495057;
+              }
+            }
+          }
+        }
+  
+        &.pokemon-card {
+          ion-card-header {
+            ion-card-title {
+              color: #343a40;
+              font-size: 1.4em;
+            }
+  
+            ion-img {
+              margin-top: 8px;
+              width: 100%;
+              height: auto;
+              border-radius: 8px;
+            }
+          }
+  
+          ion-card-content {
+            ion-list {
+              ion-item {
+                --background: #ffffff;
+                border-radius: 8px;
+                margin-bottom: 8px;
+                padding: 12px;
+                font-size: 1em;
+                color: #495057;
+  
+                ion-label {
+                  color: #343a40;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
