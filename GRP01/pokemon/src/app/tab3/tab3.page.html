@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Pokédex</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let record of battleRecords">
+      <ion-thumbnail slot="start">
+        <img [src]="record.pokemonSprite">
+      </ion-thumbnail>
+      <ion-label>
+        <h2>{{ record.pokemonName | uppercase }}</h2>
+        <p>Vitórias: {{ record.victories }}</p>
+        <p>Derrotas: {{ record.defeats }}</p>
+        <p>Empates: {{ record.ties }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

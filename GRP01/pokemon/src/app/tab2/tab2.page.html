@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Batalhar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content style="background-image: url(`https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/fb8431de-9631-4ad2-b8fc-667b063d7471/d6dkaxe-15a2de20-5e6a-4284-bf8d-cffd2827ee75.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2ZiODQzMWRlLTk2MzEtNGFkMi1iOGZjLTY2N2IwNjNkNzQ3MVwvZDZka2F4ZS0xNWEyZGUyMC01ZTZhLTQyODQtYmY4ZC1jZmZkMjgyN2VlNzUucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.6T6EQtyjY2BSdMFQyAjdplBJVn_VMBrV2nX8vlpVqnM`);">
+  <ion-button expand="full" (click)="batalhar()">Iniciar Batalha</ion-button>
+
+  <ion-card *ngIf="pokemon1.name">
+    <img [src]="pokemon1.sprites.front_default" />
+    <ion-card-header>
+      <ion-card-title>{{ pokemon1.name | uppercase }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Habilidades: {{ pokemon1.abilities.length }}</p>
+      <p>Altura: {{ pokemon1.height }} dm</p>
+      <p>Peso: {{ pokemon1.weight }} hg</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="pokemon2.name">
+    <img [src]="pokemon2.sprites.front_default" />
+    <ion-card-header>
+      <ion-card-title>{{ pokemon2.name | uppercase }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Habilidades: {{ pokemon2.abilities.length }}</p>
+      <p>Altura: {{ pokemon2.height }} </p>
+      <p>Peso: {{ pokemon2.weight }} </p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="resultadoBatalha">
+    <ion-card-header>
+      <ion-card-title>Resultado da Batalha</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>{{ resultadoBatalha }}</p>
+    </ion-card-content>
+  </ion-card>
+  <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+    <ion-fab-button (click)="addPhotoToGallery()">
+    <ion-icon name="camera"></ion-icon>
+    </ion-fab-button>
+    </ion-fab>
+</ion-content>
